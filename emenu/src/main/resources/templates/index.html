@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>E-MENU</title>
+</head>
+<body>
+
+  <!-- nav bar starts -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/">E-menu</a>
+  </nav>
+  <!-- nav bar ends -->
+
+  <div class="form">
+      
+        <ul class="tab-group">
+          <li class="tab" id="signupTab"><a href="#signup">Sign Up</a></li>
+          <li class="tab active"><a href="#login">Log In</a></li>
+        </ul>
+        
+        <div class="tab-content">
+          <!-- message from fetch api -->
+          <div id="signupMessage"></div>
+          <!-- signup form starts -->
+          <div id="signup">
+
+            <h1>Sign Up for Free</h1>
+            
+            <form method="post" id="signUpForm">
+            
+            <div class="top-row">
+              <div class="field-wrap">
+                <label>
+                  First Name<span class="req">*</span>
+                </label>
+                <input type="text" required class="firstname" name="firstname" />
+              </div>
+          
+              <div class="field-wrap">
+                <label>
+                  Last Name<span class="req">*</span>
+                </label>
+                <input type="text" required class="lastname" name="lastname"/>
+              </div>
+            </div>
+  
+            <div class="field-wrap">
+              <label>
+                Email Address<span class="req">*</span>
+              </label>
+              <input type="email" required class="signInEmail" name="email"/>
+            </div>
+            
+            <div class="field-wrap">
+              <label>
+                Set A Password<span class="req">*</span>
+              </label>
+              <input type="password" required class="signInPassword" name="password"/>
+            </div>
+            
+            <button type="submit" class="button button-block">Get Started</button>
+            
+            </form>
+  
+          </div>
+          <!-- signup form ends -->
+
+          <!-- message from fetch api -->
+          <div id="loginMessage"></div>
+
+          <!-- login form starts -->
+          <div id="login">   
+            <h1>Welcome Back!</h1>
+            <form method="post" id="loginForm">
+            
+              <div class="field-wrap">
+              <label>
+                Email Address<span class="req">*</span>
+              </label>
+              <input type="email"required autocomplete="off" name="email"/>
+            </div>
+            
+            <div class="field-wrap">
+              <label>
+                Password<span class="req">*</span>
+              </label>
+              <input type="password"required autocomplete="off" name="password"/>
+            </div>
+            
+            <p class="forgot"><a href="#">Forgot Password?</a></p>
+            
+            <button class="button button-block">Log In</button>
+            
+            </form>
+  
+          </div>
+          <!-- login form ends -->
+          
+        </div><!-- tab-content -->
+        
+  </div> <!-- /form -->
+
+      <!-- Footer-->
+      <div class="footer">
+        <div class="container">
+            <p>Team SSD Copyright &copy; 2021</p>
+        </div>
+    </div>
+
+<script src="js/index.js"></script>
+</body>
+</html>
